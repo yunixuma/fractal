@@ -6,7 +6,7 @@
 #    By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 16:52:37 by ykosaka           #+#    #+#              #
-#    Updated: 2024/02/21 01:22:50 by Yoshihiro K      ###   ########.fr        #
+#    Updated: 2024/02/22 09:05:15 by Yoshihiro K      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OS				= $(shell uname)
 SRC				= fra_main.c fra_param.c \
 				  fra_mlx.c fra_win.c fra_img.c fra_print.c fra_exit.c \
 				  fra_render_background.c fra_render_fractal.c \
-				  fra_render_rectangle.c fra_render_line.c \
+				  fra_render_rectangle.c fra_render_line.c fra_render_pixel.c \
 				  fra_render_imgline.c fra_render_imgpixel.c \
 				  fra_render_blend.c \
 				  fra_ctrl.c \
@@ -38,7 +38,7 @@ SRC				= fra_main.c fra_param.c \
 				  ft_math.c ft_math_distance.c 
 
 SRC_DEBUG		= debug_common.c \
-				  debug_fra.c debug_fra_f.c debug_fra_map.c debug_fra_img.c
+				  debug_fra.c debug_fra_f.c debug_fra_img.c
 
 # Enumeration of directories
 SRCDIR			= ./src

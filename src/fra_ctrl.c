@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/21 01:10:09 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/21 07:55:36 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ bool	fra_ctrl_move(t_var *var, t_cartes *move)
 	return (true);
 }
 
-bool	fra_ctrl_zoom(t_param *param, double zoom_add)
+bool	fra_ctrl_zoom(t_param *param, double zoom_ply)
 {
 	double	zoom_bak;
 
 	zoom_bak = param->zoom;
-	param->zoom += zoom_add;
-	if (param->zoom > ANGLE_FOV_MAX)
-		param->zoom = ANGLE_FOV_MAX;
-	else if (param->zoom < ANGLE_FOV_MIN)
-		param->zoom = ANGLE_FOV_MIN;
+	param->zoom *= zoom_ply;
+	if (param->zoom > ZOOM_MAX)
+		param->zoom = ZOOM_MAX;
+	else if (param->zoom < ZOOM_MIN)
+		param->zoom = ZOOM_MIN;
 	if (param->zoom == zoom_bak)
 		return (false);
 	return (true);

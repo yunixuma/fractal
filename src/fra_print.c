@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:04:04 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 23:16:20 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/21 07:52:31 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	fra_print_status(t_param *param)
 	printf(MSG_STATUS_POS_1, param->coord.x);
 	printf(MSG_STATUS_POS_2, param->coord.y);
 	printf(MSG_STATUS_SPEED, param->speed);
-	printf(MSG_STATUS_FOV, param->zoom);
+	printf(MSG_STATUS_ZOOM, param->zoom);
 	printf(MSG_STATUS_MODE, cursor_mode[ft_hasflag(param->event, FLAG_CURSOR)]);
 }
 

@@ -50,6 +50,7 @@ void	fra_img_destroy(t_var *var);
 void	fra_render_background(t_var *var);
 void	fra_render_fractal(t_var *var);
 void	fra_render_blend(t_img *img_dst, t_img *img_src, t_addr *zero);
+void	fra_render_pixel(t_img *img, int color_code, t_addr *pixel);
 void	fra_render_line(t_img *img, int color_code, \
 	t_addr *zero, t_polar *line);
 void	fra_render_rectangle(t_img *img, int color_code, \

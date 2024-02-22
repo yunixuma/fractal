@@ -29,9 +29,9 @@ static bool	fra_ctrl_clickhook_focus(t_cartes *coord, int button, \
 static bool	fra_ctrl_clickhook_zoom(double *zoom, int key, int speed)
 {
 	*zoom = 1;
-	if (key == KEY_WIDE)
+	if (key == BUTTON_WIDE)
 		*zoom = UNIT_ZOOM * speed;
-	else if (key == KEY_TELE)
+	else if (key == BUTTON_TELE)
 		*zoom /= (UNIT_ZOOM * speed);
 	else
 		return (false);

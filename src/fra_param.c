@@ -20,6 +20,10 @@ static void	fra_param_setcolor(t_param *param)
 	param->color[i++] = COLOR_1;
 	param->color[i++] = COLOR_2;
 	param->color[i++] = COLOR_3;
+	// param->color[i++] = COLOR_4;
+	// param->color[i++] = COLOR_5;
+	// param->color[i++] = COLOR_6;
+	// param->color[i++] = COLOR_7;
 }
 
 int	fra_param_init(t_param *param, int argc, char *argv[])

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/21 00:31:59 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/22 08:37:12 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,14 @@
 # define UNIT_MOVE			0.03125
 # define UNIT_ZOOM			1.4142135623730950488016887242097
 # define ANGLE_RIGHT		90.
-# define ANGLE_FOV			90.
-# define ANGLE_FOV_MAX		108.
-# define ANGLE_FOV_MIN		72.
+# define ZOOM_DEFAULT		1.
+# define ZOOM_MAX			0x7fffffffffffffff
+# define ZOOM_MIN			0.0000000000000000000000000000001
 # define WIDTH_VISION		640
 # define HEIGHT_VISION		480
 # define ZERO_VISION		0
-# define HEIGHT_SIGHT		0.5
-# define WIDTH_BLOCK		120
-# define HEIGHT_BLOCK		120
-# define SIZE_CELL			12
+# define MAX_ITERATION		100
 # define LEN_POS			2
-# define RATIO_HUD			3
 # define WEIGHT_FRAME		2
 # define UNIT_SPEED			1
 # define MAX_SPEED			16
