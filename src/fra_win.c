@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 23:50:22 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/22 09:54:45 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	fra_win_init(t_var *var)
 {
 	var->win = mlx_new_window(var->conn, \
-		WIDTH_VISION, HEIGHT_VISION, STR_TITLE);
+		WIDTH_VISION, HEIGHT_VISION, var->param->title);
 	if (var->win == NULL)
 		return (ft_seterr(ERR_MLX));
 	return (ERR_NOERR);

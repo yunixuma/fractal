@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/21 00:11:10 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/22 19:22:52 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,12 @@ typedef struct s_param
 	int			color[N_COLOR];
 	double		zoom;
 	t_cartes	coord;
+	t_cartes	constant;
 	int			event;
 	int			key;
 	t_addr		cursor;
 	int			speed;
+	char		*title;
 }	t_param;
 
 typedef struct s_var

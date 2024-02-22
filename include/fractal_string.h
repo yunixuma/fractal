@@ -6,18 +6,17 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/22 07:56:02 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/22 09:50:20 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTAL_STRING_H
 # define FRACTAL_STRING_H
 
-# define CHRS_MAP			"NESW01 "
 # define STR_EMPTY			""
 # define STR_MANDELBROT		"MANDELBROT"
 # define STR_JULIA			"JULIA"
-# define STR_TITLE			"cub3D"
+# define STR_TITLE			"fract-ol"
 # define STR_ON				"\033[43m ON  \033[49m"
 # define STR_OFF			"\033[44m OFF \033[49m"
 

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/22 08:37:12 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/22 17:06:18 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@
 # define TYPE_JULIA			2
 
 # define UNIT_MOVE			0.03125
-# define UNIT_ZOOM			1.4142135623730950488016887242097
+# define UNIT_ZOOM			1.0905077326652576592070106557606
 # define ANGLE_RIGHT		90.
 # define ZOOM_DEFAULT		1.
 # define ZOOM_MAX			0x7fffffffffffffff
 # define ZOOM_MIN			0.0000000000000000000000000000001
-# define WIDTH_VISION		640
-# define HEIGHT_VISION		480
+# define WIDTH_VISION		800
+# define HEIGHT_VISION		600
 # define ZERO_VISION		0
 # define MAX_ITERATION		100
 # define LEN_POS			2
@@ -77,7 +77,7 @@ typedef enum e_channel
 }	t_channel;
 
 # define IDX_BG				0
-# define N_COLOR			4
+# define N_COLOR			7
 # define COLOR_BG			0x000000
 # define COLOR_1			0x00ff00
 # define COLOR_2			0xff0000
@@ -98,22 +98,8 @@ typedef enum e_imgidx
 
 # define INVAL_FILENO		-1
 # define VAL_INVAL			-1
-# define CHR_DIR			'/'
-# define CHR_SEP			','
-# define CHR_SPACE			' '
-# define COLOR_SPACE		0x7f000000
-# define COLOR_WALL			0x3f00007f
-# define COLOR_FREE			0x3fffffff
-# define COLOR_POS			0x3fff0000
-# define COLOR_FRAME		0x3f00ff00
 
-# define FLAG_CHECKED		0x80
 # define SIZE_NULL			0
 # define POS_NOEXIST		-1
-# define SIZE_TILE			64
-# define SIZE_TILE_SMALL	32
-# define SIZE_FRAME_SIDE	4
-# define SIZE_FRAME_END		28
-# define COLOR_OBJ			0x00FF0000
 
 #endif
