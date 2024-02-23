@@ -12,7 +12,8 @@
 
 #include "fractal.h"
 
-static bool	fra_ctrl_keyhook_fire_move(t_cartes *move, int key, int speed)
+static bool	fra_ctrl_keyhook_fire_move(t_cartes *move, int key, \
+	int speed, double zoom)
 {
 	double	polar;
 
@@ -25,8 +26,8 @@ static bool	fra_ctrl_keyhook_fire_move(t_cartes *move, int key, int speed)
 		polar += ANGLE_RIGHT * 2;
 	else if (key != KEY_FORWARD)
 		return (false);
-	move->x = UNIT_MOVE * speed * sin(ft_math_deg2rad(polar));
-	move->y = UNIT_MOVE * speed * -cos(ft_math_deg2rad(polar));
+	move->x = UNIT_MOVE * speed * zoom * sin(ft_math_deg2rad(polar));
+	move->y = UNIT_MOVE * speed * zoom * -cos(ft_math_deg2rad(polar));
 	return (true);
 }
 
@@ -48,7 +49,8 @@ int	fra_ctrl_keyhook_fire(int key, t_var *var)
 
 	if (!ft_hasflag(var->param->event, FLAG_KEY))
 		return (false);
-	if (fra_ctrl_keyhook_fire_move(&move, key, var->param->speed) \
+	if (fra_ctrl_keyhook_fire_move(&move, key, \
+		var->param->speed, var->param->zoom) \
 		&& fra_ctrl_move(var, &move))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else if (fra_ctrl_keyhook_fire_zoom(&move.x, key, var->param->speed) \

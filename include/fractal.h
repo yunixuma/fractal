@@ -91,5 +91,6 @@ void	ft_cartes_set(t_cartes *pt, double x, double y);
 void	ft_cartes_copy(t_cartes *dst, t_cartes *src);
 void	ft_addr_set(t_addr *addr, ssize_t x, ssize_t y);
 bool	ft_inrange_dbl(double nb, double lower, double upper);
+float	ft_atof(const char *str);
 
 #endif

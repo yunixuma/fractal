@@ -17,8 +17,8 @@ static bool	fra_ctrl_clickhook_focus(t_cartes *coord, int button, \
 {
 	if (button != BUTTON_FOCUS)
 		return (false);
-	coord->x = (cursor->x - WIDTH_VISION / 2) * param->speed / param->zoom;
-	coord->y = (cursor->y - HEIGHT_VISION / 2) * param->speed / param->zoom;
+	coord->x = (-cursor->x + WIDTH_VISION / 2) * param->speed * param->zoom;
+	coord->y = (-cursor->y + HEIGHT_VISION / 2) * param->speed * param->zoom;
 //DD(turn->yaw);
 //DD(turn->pitch);
 	if (coord->x == 0 && coord->y == 0)

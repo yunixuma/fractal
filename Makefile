@@ -6,7 +6,7 @@
 #    By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 16:52:37 by ykosaka           #+#    #+#              #
-#    Updated: 2024/02/22 09:05:15 by Yoshihiro K      ###   ########.fr        #
+#    Updated: 2024/02/23 08:55:20 by Yoshihiro K      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRC				= fra_main.c fra_param.c \
 				  ft_free.c ft_seterr.c \
 				  ft_prompt_clr.c ft_prompt_arg.c \
 				  ft_hasflag.c ft_inrange.c ft_stris.c \
-				  ft_math.c ft_math_distance.c 
+				  ft_math.c ft_math_distance.c ft_atof.c
 
 SRC_DEBUG		= debug_common.c \
 				  debug_fra.c debug_fra_f.c debug_fra_img.c

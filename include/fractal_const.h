@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/22 17:06:18 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 09:10:18 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <errno.h>
 
 # define OFFSET_ARG			1
-# define IDX_ARG			1
 # define LEN_MAXPATH		255
 # define BITS_CHANNEL		8
 # define MASK_CHANNEL		0xff
@@ -45,16 +44,16 @@
 # define TYPE_MANDELBROT	1
 # define TYPE_JULIA			2
 
-# define UNIT_MOVE			0.03125
+# define UNIT_MOVE			1.
 # define UNIT_ZOOM			1.0905077326652576592070106557606
 # define ANGLE_RIGHT		90.
-# define ZOOM_DEFAULT		1.
-# define ZOOM_MAX			0x7fffffffffffffff
-# define ZOOM_MIN			0.0000000000000000000000000000001
+# define ZOOM_DEFAULT		0.0078125
+# define ZOOM_MAX			1024
+# define ZOOM_MIN			0.00000000000090949470177292823755
 # define WIDTH_VISION		800
 # define HEIGHT_VISION		600
 # define ZERO_VISION		0
-# define MAX_ITERATION		100
+# define MAX_ITERATION		256
 # define LEN_POS			2
 # define WEIGHT_FRAME		2
 # define UNIT_SPEED			1
@@ -66,6 +65,13 @@
 # define FLAG_KEY			0x20
 # define FLAG_CURSOR		0x40
 # define FLAG_CLICK			0x80
+
+typedef enum e_arg
+{
+	IDX_ARG_TYPE	= 1,
+	IDX_ARG_CX		= 2,
+	IDX_ARG_CY		= 3
+}	t_arg;
 
 typedef enum e_channel
 {

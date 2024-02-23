@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/21 01:12:05 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 03:44:42 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static bool	fra_ctrl_cursorhook_move(t_cartes *move, \
 	move->x = 0;
 	move->y = 0;
 	if (new->x < old->x)
-		move->x = -UNIT_MOVE * param->speed / param->zoom;
+		move->x = UNIT_MOVE * param->speed * param->zoom;
 	else if (new->x > old->x && old->x > VAL_INVAL)
-		move->x = UNIT_MOVE * param->speed / param->zoom;
+		move->x = -UNIT_MOVE * param->speed * param->zoom;
 	if (new->y < old->y)
-		move->y = UNIT_MOVE * param->speed / param->zoom;
+		move->y = UNIT_MOVE * param->speed * param->zoom;
 	else if (new->y > old->y && old->y > VAL_INVAL)
-		move->y = -UNIT_MOVE * param->speed / param->zoom;
+		move->y = -UNIT_MOVE * param->speed * param->zoom;
 	if (move->x == 0 && move->y == 0)
 		return (false);
 	return (true);
