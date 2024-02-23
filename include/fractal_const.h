@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 15:24:12 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/23 15:29:02 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ typedef enum e_channel
 }	t_channel;
 
 # define IDX_BG				0
-# define N_CHROMA			16
+# define N_HUE			16
 # define N_PALETTE			7
 
 typedef enum e_pallete

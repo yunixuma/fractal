@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 15:26:55 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/23 15:29:03 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	fra_calc_mandelbrot(t_cartes *coord, int *color)
 	}
 	if (i == MAX_ITERATION)
 		return (COLOR_BG);
-	return (ft_color_hsv2code((i % N_CHROMA) * (360 / N_CHROMA), 0xff, 0xff));
+	return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
 	return (color[i % N_PALETTE]);
 }
 
@@ -52,6 +52,6 @@ int	fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant)
 	}
 	if (i == MAX_ITERATION)
 		return (COLOR_BG);
-	return (ft_color_hsv2code((i % N_CHROMA) * (360 / N_CHROMA), 0xff, 0xff));
+	return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
 	return (color[i % N_PALETTE]);
 }
