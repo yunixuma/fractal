@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 03:46:14 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 09:25:22 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@
 # define MSG_STATUS_POS_1	"Coord: (\033[4;32m%6.2lf\033[0m, "
 # define MSG_STATUS_POS_2	"\033[4;32m%5.2lf\033[0m)\t"
 # define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
-# define MSG_STATUS_ZOOM	"Zoom: \033[4;32mx%6.3lf\033[0m\t"
+# define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
 # define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\n"
 //# define MSG_SCORE			"Player %3d scores moved\n"
 # define MSG_BREAK			"\033[33mTerminated by player's operation\033[39m"

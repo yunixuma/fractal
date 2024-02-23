@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 19:29:11 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 09:35:54 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define KEYCODE_ESC	0x35
 # define KEY_EXIT_1		KEYCODE_ESC
 # define KEY_EXIT_2		KEYCODE_Q
-# define KEY_FORWARD	KEYCODE_W
-# define KEY_BACKWARD	KEYCODE_S
+# define KEY_MOVEUP		KEYCODE_W
+# define KEY_MOVEDOWN	KEYCODE_S
 # define KEY_MOVELEFT	KEYCODE_A
 # define KEY_MOVERIGHT	KEYCODE_D
 # define KEY_TURNLEFT	KEYCODE_LEFT

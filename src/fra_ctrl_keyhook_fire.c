@@ -18,13 +18,13 @@ static bool	fra_ctrl_keyhook_fire_move(t_cartes *move, int key, \
 	double	polar;
 
 	polar = 0;
-	if (key == KEY_MOVELEFT)
+	if (key == KEY_MOVERIGHT)
 		polar += ANGLE_RIGHT * 3;
-	else if (key == KEY_MOVERIGHT)
+	else if (key == KEY_MOVELEFT)
 		polar += ANGLE_RIGHT * 1;
-	else if (key == KEY_BACKWARD)
+	else if (key == KEY_MOVEUP)
 		polar += ANGLE_RIGHT * 2;
-	else if (key != KEY_FORWARD)
+	else if (key != KEY_MOVEDOWN)
 		return (false);
 	move->x = UNIT_MOVE * speed * zoom * sin(ft_math_deg2rad(polar));
 	move->y = UNIT_MOVE * speed * zoom * -cos(ft_math_deg2rad(polar));

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 09:10:18 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 09:31:47 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@
 # define TYPE_MANDELBROT	1
 # define TYPE_JULIA			2
 
-# define UNIT_MOVE			1.
+# define UNIT_MOVE			16.
 # define UNIT_ZOOM			1.0905077326652576592070106557606
 # define ANGLE_RIGHT		90.
-# define ZOOM_DEFAULT		0.0078125
-# define ZOOM_MAX			1024
-# define ZOOM_MIN			0.00000000000090949470177292823755
+# define ZOOM_DEFAULT		0.01
+# define ZOOM_MAX			2.56
+# define ZOOM_MIN			0.0000000000000090949470177292823755
 # define WIDTH_VISION		800
 # define HEIGHT_VISION		600
 # define ZERO_VISION		0
