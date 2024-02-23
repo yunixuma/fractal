@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_calc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 15:29:03 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/23 17:27:42 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int	fra_calc_mandelbrot(t_cartes *coord, int *color)
 	}
 	if (i == MAX_ITERATION)
 		return (COLOR_BG);
-	return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
-	return (color[i % N_PALETTE]);
+	// return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
+	return (color[i % N_COLOR]);
 }
 
 int	fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant)
@@ -52,6 +52,6 @@ int	fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant)
 	}
 	if (i == MAX_ITERATION)
 		return (COLOR_BG);
-	return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
-	return (color[i % N_PALETTE]);
+	// return (ft_color_hsv2code((i % N_HUE) * (360 / N_HUE), 0xff, 0xff));
+	return (color[i % N_COLOR]);
 }

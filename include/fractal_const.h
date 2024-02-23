@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_const.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 15:29:02 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/23 17:29:14 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,7 @@ typedef enum e_channel
 }	t_channel;
 
 # define IDX_BG				0
-# define N_HUE			16
-# define N_PALETTE			7
+# define N_COLOR			15
 
 typedef enum e_pallete
 {
