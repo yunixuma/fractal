@@ -59,6 +59,8 @@ void	fra_render_imgpixel(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
+int		fra_calc_mandelbrot(t_cartes *coord, int *color);
+int		fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);
 int		fra_ctrl_keyhook_up(int key, t_var *var);
@@ -92,5 +94,7 @@ void	ft_cartes_copy(t_cartes *dst, t_cartes *src);
 void	ft_addr_set(t_addr *addr, ssize_t x, ssize_t y);
 bool	ft_inrange_dbl(double nb, double lower, double upper);
 float	ft_atof(const char *str);
+int		ft_color_rgb2code(int red, int green, int blue);
+int		ft_color_hsv2code(int hue, int chr, int bri);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_string.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 09:25:22 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 14:46:23 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@
 # define MSG_HOWTO_SPEED	"Change Speed: \033[1m[F][RightClick]\033[0m\n"
 # define MSG_HOWTO_EXIT		"Exit: \033[1m[Q]\033[0m or \033[1m[Esc]\033[0m\n"
 # define MSG_HLINE			"\033[2m--------------------------------------\033[0m"
-# define MSG_STATUS_POS_1	"Coord: (\033[4;32m%6.2lf\033[0m, "
-# define MSG_STATUS_POS_2	"\033[4;32m%5.2lf\033[0m)\t"
+# define MSG_STATUS_POS_1	"Coord: (\033[4;32m%lf\033[0m, "
+# define MSG_STATUS_POS_2	"\033[4;32m%lf\033[0m)\t"
 # define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
 # define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
 # define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\n"

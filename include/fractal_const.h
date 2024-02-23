@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_const.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 09:31:47 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 15:24:12 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,20 @@ typedef enum e_channel
 }	t_channel;
 
 # define IDX_BG				0
-# define N_COLOR			7
-# define COLOR_BG			0x000000
-# define COLOR_1			0x00ff00
-# define COLOR_2			0xff0000
-# define COLOR_3			0x0000ff
-# define COLOR_4			0xffff00
-# define COLOR_5			0xff00ff
-# define COLOR_6			0x00ffff
-# define COLOR_7			0x7f7f7f
+# define N_CHROMA			16
+# define N_PALETTE			7
+
+typedef enum e_pallete
+{
+	COLOR_BG	= 0x000000,
+	COLOR_1		= 0x00ff00,
+	COLOR_2		= 0xff0000,
+	COLOR_3		= 0x0000ff,
+	COLOR_4		= 0xffff00,
+	COLOR_5		= 0xff00ff,
+	COLOR_6		= 0x00ffff,
+	COLOR_7		= 0x7f7f7f
+}	t_palette;
 
 # define N_DIRECTION		IDX_FREE
 # define N_TEXTURE			N_DIRECTION

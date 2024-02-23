@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_typedef.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/22 19:22:52 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/23 15:25:01 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ typedef struct s_img
 typedef struct s_param
 {
 	int			type;
-	int			color[N_COLOR];
+	int			color[N_PALETTE];
 	double		zoom;
 	t_cartes	coord;
 	t_cartes	constant;
