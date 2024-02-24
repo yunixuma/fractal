@@ -57,7 +57,7 @@ int	fra_ctrl_clickhook(int button, int x, int y, t_var *var)
 	ft_addr_set(&cursor, x, y);
 //debug_printf("down\tcursor(%d, %d)\tbutton: %d\n", x, y, button);
 	if (fra_ctrl_clickhook_focus(&coord, button, &cursor, var->param) \
-		&& fra_ctrl_move(var, &coord))
+		&& fra_ctrl_move(var->param, &coord))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else if (fra_ctrl_clickhook_zoom(&coord.x, button, var->param->speed) \
 		&& fra_ctrl_zoom(var->param, coord.x))

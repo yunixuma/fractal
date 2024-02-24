@@ -43,6 +43,25 @@ static bool	fra_ctrl_keyhook_fire_zoom(double *zoom, int key, int speed)
 	return (true);
 }
 
+static bool	fra_ctrl_keyhook_fire_constant(t_cartes *move, int key, \
+	int speed, double zoom)
+{
+	double	polar;
+
+	polar = 0;
+	if (key == KEY_REALPLUS)
+		polar += ANGLE_RIGHT * 3;
+	else if (key == KEY_REALMINUS)
+		polar += ANGLE_RIGHT * 1;
+	else if (key == KEY_IMAGPLUS)
+		polar += ANGLE_RIGHT * 2;
+	else if (key != KEY_IMAGMINUS)
+		return (false);
+	move->x = UNIT_PARAM * speed * zoom * sin(ft_math_deg2rad(polar));
+	move->y = UNIT_PARAM * speed * zoom * -cos(ft_math_deg2rad(polar));
+	return (true);
+}
+
 int	fra_ctrl_keyhook_fire(int key, t_var *var)
 {
 	t_cartes	move;
@@ -51,10 +70,14 @@ int	fra_ctrl_keyhook_fire(int key, t_var *var)
 		return (false);
 	if (fra_ctrl_keyhook_fire_move(&move, key, \
 		var->param->speed, var->param->zoom) \
-		&& fra_ctrl_move(var, &move))
+		&& fra_ctrl_move(var->param, &move))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else if (fra_ctrl_keyhook_fire_zoom(&move.x, key, var->param->speed) \
 		&& fra_ctrl_zoom(var->param, move.x))
+		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
+	else if (fra_ctrl_keyhook_fire_constant(&move, key, \
+		var->param->speed, var->param->zoom) \
+		&& fra_ctrl_constant(var->param, &move))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else
 		return (false);

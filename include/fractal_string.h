@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_string.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 14:46:23 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/25 01:57:15 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,9 @@
 # define MSG_MLX			"An error occured during initiate a X-Window I/F"
 # define MSG_WAIT			"Wait a moment for creating the window..."
 //# define MSG_HOWTO_GOAL	"Control the monkey to take all stars to dragon"
-# define MSG_HOWTO_MOVE		"Move: \033[1m[W][A][S][D]\033[0m\t"
-# define MSG_HOWTO_TURN		"Turn: \033[1m[Left][Right]\033[0m\n"
+# define MSG_HOWTO_MOVE		"Move: \033[1m[Up][Left][Down][Right]\033[0m\t"
+# define MSG_HOWTO_TURN		"Turn: \033[1m[Z][X]\033[0m\n"
+# define MSG_HOWTO_PARAM	"Move: \033[1m[D][A][W][S]\033[0m\t"
 # define MSG_HOWTO_FOCUS	"Focus: \033[1m[LeftClick]\033[0m\t"
 # define MSG_HOWTO_SCROLL	"Cursor: \033[1m[C][MidClick]\033[0m\n"
 # define MSG_HOWTO_ZOOMIN	"Zoom-in: \033[1m[PgUp][ScrUp]\033[0m\t"
@@ -54,6 +55,8 @@
 # define MSG_HLINE			"\033[2m--------------------------------------\033[0m"
 # define MSG_STATUS_POS_1	"Coord: (\033[4;32m%lf\033[0m, "
 # define MSG_STATUS_POS_2	"\033[4;32m%lf\033[0m)\t"
+# define MSG_STATUS_PARAM_1	"Constant: (\033[4;32m%lf\033[0m, "
+# define MSG_STATUS_PARAM_2	"\033[4;32m%lf\033[0m)\n"
 # define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
 # define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
 # define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\n"

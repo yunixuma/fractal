@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 03:44:42 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 01:49:21 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	fra_ctrl_cursorhook(int x, int y, t_var *var)
 	ft_addr_set(&new, x, y);
 	if (fra_ctrl_cursorhook_move(&move, &new, \
 		&var->param->cursor, var->param) \
-		&& fra_ctrl_move(var, &move))
+		&& fra_ctrl_move(var->param, &move))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	var->param->cursor.x = x;
 	var->param->cursor.y = y;

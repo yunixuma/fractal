@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/21 07:55:36 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 01:47:12 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,21 @@ bool	fra_ctrl_speed(t_param *param)
 	return (true);
 }
 
-bool	fra_ctrl_move(t_var *var, t_cartes *move)
+bool	fra_ctrl_move(t_param *param, t_cartes *move)
 {
-	// if (!fra_ctrl_move_valid(var->param->map, move, &var->param->cartes))
+	// if (!fra_ctrl_move_valid(param->map, move, &param->cartes))
 	// 	return (false);
-	var->param->coord.y += move->y;
-	var->param->coord.x += move->x;
+	param->coord.y += move->y;
+	param->coord.x += move->x;
 //debug_printf("move: (%6.3lf, %6.3lf)\n", move->x, move->y);
-//debug_printf("cartes: (%6.3lf, %6.3lf)\n", var->param->cartes.x, var->param->cartes.y);
+//debug_printf("cartes: (%6.3lf, %6.3lf)\n", param->cartes.x, param->cartes.y);
+	return (true);
+}
+
+bool	fra_ctrl_constant(t_param *param, t_cartes *move)
+{
+	param->constant.y += move->y;
+	param->constant.x += move->x;
 	return (true);
 }
 

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 09:34:50 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 01:41:36 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@
 # define VK_S				's'
 # define VK_D				'd'
 # define VK_F				'f'
+# define VK_Z				'z'
+# define VK_X				'x'
 # define VK_C				'c'
 # define VK_UP				0xff52
 # define VK_LEFT			0xff51
@@ -49,14 +51,16 @@
 # define VK_SCROLLDOWN		0x05
 # define KEY_EXIT_1			VK_ESC
 # define KEY_EXIT_2			VK_Q
-# define KEY_MOVEUP			VK_W
-# define KEY_MOVEDOWN		VK_S
-# define KEY_MOVELEFT		VK_A
-# define KEY_MOVERIGHT		VK_D
-# define KEY_TURNLEFT		VK_LEFT
-# define KEY_TURNRIGHT		VK_RIGHT
-# define KEY_LOOKUP			VK_UP
-# define KEY_LOOKDOWN		VK_DOWN
+# define KEY_MOVEUP			VK_UP
+# define KEY_MOVEDOWN		VK_DOWN
+# define KEY_MOVELEFT		VK_LEFT
+# define KEY_MOVERIGHT		VK_RIGHT
+# define KEY_REALPLUS		VK_D
+# define KEY_REALMINUS		VK_A
+# define KEY_IMAGPLUS		VK_W
+# define KEY_IMAGMINUS		VK_S
+# define KEY_TURNLEFT		VK_Z
+# define KEY_TURNRIGHT		VK_X
 # define KEY_CURSOR			VK_C
 # define KEY_SPEED			VK_F
 # define KEY_TELE			VK_PGUP
