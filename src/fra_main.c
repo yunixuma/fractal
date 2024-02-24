@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 22:47:49 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/24 14:26:31 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char *argv[])
 	t_param	param;
 	int		errnum;
 
-	errnum = fra_param_init(&param, argc, argv);
+	errnum = fra_setparam(&param, argc, argv);
 	if (errnum)
 		return (fra_print_err(errnum));
 	fra_main_mlx(&param);

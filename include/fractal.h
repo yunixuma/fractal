@@ -36,7 +36,7 @@
 # endif
 
 int		main(int argc, char *argv[]);
-int		fra_param_init(t_param *param, int argc, char *argv[]);
+int		fra_setparam(t_param *param, int argc, char *argv[]);
 int		fra_mlx_init(t_var *var);
 int		fra_mlx_loop(t_var *var);
 int		fra_mlx_hook(t_var *var);
@@ -59,8 +59,8 @@ void	fra_render_imgpixel(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
-int		fra_calc_mandelbrot(t_cartes *coord, int *color);
-int		fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant);
+int		fra_calc_mandelbrot(t_cartes c, int *color);
+int		fra_calc_julia(t_cartes z, int *color, t_cartes c);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);
 int		fra_ctrl_keyhook_up(int key, t_var *var);

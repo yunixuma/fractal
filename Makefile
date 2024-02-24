@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+         #
+#    By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 16:52:37 by ykosaka           #+#    #+#              #
-#    Updated: 2024/02/23 15:11:24 by ykosaka          ###   ########.fr        #
+#    Updated: 2024/02/24 14:25:40 by Yoshihiro K      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ LIBNAME_MLX		= libmlx
 OS				= $(shell uname)
 
 # Enumeration of files
-SRC				= fra_main.c fra_param.c \
+SRC				= fra_main.c fra_setparam.c \
 				  fra_mlx.c fra_win.c fra_img.c fra_print.c fra_exit.c \
 				  fra_render_background.c fra_render_fractal.c fra_calc.c \
 				  fra_render_rectangle.c fra_render_line.c fra_render_pixel.c \

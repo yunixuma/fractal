@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 17:29:14 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/24 22:49:17 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@
 # define HEIGHT_VISION		600
 # define ZERO_VISION		0
 # define MAX_ITERATION		256
+# define LIMIT_SIZE			4
 # define LEN_POS			2
 # define WEIGHT_FRAME		2
 # define UNIT_SPEED			1

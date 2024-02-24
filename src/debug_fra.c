@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   debug_fra.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:04:04 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 15:16:06 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/23 20:03:51 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	debug_fra_param(t_param *param)
 		return ;
 	dprintf(FD_DEBUG, "param\t%%p: %p\n", param);
 	i = 0;
-	while (i < N_PALLETE)
+	while (i < N_COLOR)
 	{
 		dprintf(FD_DEBUG, "color\t%3zd\t%#x\n", i, param->color[i]);
 		i++;

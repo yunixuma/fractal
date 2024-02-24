@@ -6,24 +6,22 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/23 17:27:42 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/24 22:48:34 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractal.h"
 
-int	fra_calc_mandelbrot(t_cartes *coord, int *color)
+int	fra_calc_mandelbrot(t_cartes c, int *color)
 {
 	t_cartes	z;
-	t_cartes	c;
 	int			i;
 
 	ft_cartes_init(&z);
-	ft_cartes_copy(&c, coord);
 	i = 0;
 	while (i < MAX_ITERATION)
 	{
-		if (z.x * z.x + z.y * z.y > 4)
+		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
 		ft_cartes_set(&z, z.x * z.x - z.y * z.y + c.x, 2 * z.x * z.y + c.y);
 		i++;
@@ -34,18 +32,14 @@ int	fra_calc_mandelbrot(t_cartes *coord, int *color)
 	return (color[i % N_COLOR]);
 }
 
-int	fra_calc_julia(t_cartes *coord, int *color, t_cartes *constant)
+int	fra_calc_julia(t_cartes z, int *color, t_cartes c)
 {
-	t_cartes	z;
-	t_cartes	c;
 	int			i;
 
-	ft_cartes_copy(&z, constant);
-	ft_cartes_copy(&c, coord);
 	i = 0;
 	while (i < MAX_ITERATION)
 	{
-		if (z.x * z.x + z.y * z.y > 4)
+		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
 		ft_cartes_set(&z, z.x * z.x - z.y * z.y + c.x, 2 * z.x * z.y + c.y);
 		i++;
