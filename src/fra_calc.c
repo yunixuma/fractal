@@ -6,18 +6,16 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/24 22:48:34 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 02:07:32 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractal.h"
 
-int	fra_calc_mandelbrot(t_cartes c, int *color)
+int	fra_calc_mandelbrot(t_cartes c, int *color, t_cartes z)
 {
-	t_cartes	z;
 	int			i;
 
-	ft_cartes_init(&z);
 	i = 0;
 	while (i < MAX_ITERATION)
 	{

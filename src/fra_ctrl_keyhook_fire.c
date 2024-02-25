@@ -50,9 +50,9 @@ static bool	fra_ctrl_keyhook_fire_constant(t_cartes *move, int key, \
 
 	polar = 0;
 	if (key == KEY_REALPLUS)
-		polar += ANGLE_RIGHT * 3;
-	else if (key == KEY_REALMINUS)
 		polar += ANGLE_RIGHT * 1;
+	else if (key == KEY_REALMINUS)
+		polar += ANGLE_RIGHT * 3;
 	else if (key == KEY_IMAGPLUS)
 		polar += ANGLE_RIGHT * 2;
 	else if (key != KEY_IMAGMINUS)
