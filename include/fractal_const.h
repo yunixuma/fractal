@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_const.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 13:56:03 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:54:21 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,10 @@
 # define ERR_NOERR			0
 # define ERR_NOARG			EISDIR
 # define ERR_MANYARGS		E2BIG
+# define ERR_INVAL			EINVAL
 # define ERR_ALLOC			ENOMEM
 # define ERR_NOTNUM			EDOM
 # define ERR_RANGE			ERANGE
-# define ERR_MANYVALS		EOVERFLOW
-# define ERR_NODEF			ENXIO
-# define ERR_EMPTY			ENODATA
 # define ERR_MLX			EBUSY
 # define TYPE_MANDELBROT	1
 # define TYPE_JULIA			2

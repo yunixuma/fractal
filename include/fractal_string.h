@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_string.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:14:37 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:53:19 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,12 @@
 # define STR_OFF			"\033[44m OFF \033[49m"
 
 # define MSG_ERR			"\033[1;31mError\033[0m"
-# define MSG_NOARG			"Missing the argument to specify a param file"
-# define MSG_MANYARGS		"Please specify only one argument"
-# define MSG_OPEN			"Cannot open the file"
+# define MSG_NOARG			"Missing the argument to specify a type of fractal"
+# define MSG_MANYARGS		"Please specify only one or three argument"
 # define MSG_ALLOC			"An error occured during allocating memory"
-# define MSG_NOTNUM			"Value of color must be a number"
-# define MSG_RANGE			"Value of color is out of range"
-# define MSG_MANYVALS		"Number of color channels must be 3"
-# define MSG_NODEF			"Missing Defination"
-# define MSG_EMPTY			"Empty line appeared"
+# define MSG_NOTNUM			"Value must be a numeric"
+# define MSG_RANGE			"Value is out of range"
+# define MSG_INVAL			"./fractal [mandelbrot/julia] [cx] [cy]"
 # define MSG_MLX			"An error occured during initiate a X-Window I/F"
 # define MSG_WAIT_WIN		"Wait a moment for creating the window..."
 # define MSG_WAIT_CALC		"\033[33mCalculating...\033[39m"

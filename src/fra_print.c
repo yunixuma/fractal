@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:04:04 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:16:28 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:54:59 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,14 @@ int	fra_print_err(int errnum)
 		ft_putendl_fd(MSG_NOARG, STDERR_FILENO);
 	else if (errnum == ERR_MANYARGS)
 		ft_putendl_fd(MSG_MANYARGS, STDERR_FILENO);
+	else if (errnum == ERR_INVAL)
+		ft_putendl_fd(MSG_INVAL, STDERR_FILENO);
 	else if (errnum == ERR_ALLOC)
 		ft_putendl_fd(MSG_ALLOC, STDERR_FILENO);
 	else if (errnum == ERR_NOTNUM)
 		ft_putendl_fd(MSG_NOTNUM, STDERR_FILENO);
 	else if (errnum == ERR_RANGE)
 		ft_putendl_fd(MSG_RANGE, STDERR_FILENO);
-	else if (errnum == ERR_MANYVALS)
-		ft_putendl_fd(MSG_NODEF, STDERR_FILENO);
-	else if (errnum == ERR_NODEF)
-		ft_putendl_fd(MSG_MANYVALS, STDERR_FILENO);
-	else if (errnum == ERR_EMPTY)
-		ft_putendl_fd(MSG_EMPTY, STDERR_FILENO);
 	else if (errnum == ERR_MLX)
 		ft_putendl_fd(MSG_MLX, STDERR_FILENO);
 	return (errnum);

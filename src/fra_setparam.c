@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_setparam.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 12:47:02 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 15:03:38 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,14 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 	char	*arg;
 
 	if (argc < OFFSET_ARG + IDX_ARG_TYPE)
-		return (fra_print_err(ERR_NOARG));
-	if (argc > OFFSET_ARG + IDX_ARG_CY)
-		return (fra_print_err(ERR_MANYARGS));
+		return (ERR_NOARG);
+	if (OFFSET_ARG + IDX_ARG_TYPE != argc && argc != OFFSET_ARG + IDX_ARG_CY)
+		return (ERR_MANYARGS);
 	arg = ft_strdup(argv[IDX_ARG_TYPE]);
 	if (arg == NULL)
 		return (fra_print_err(ERR_ALLOC));
 	prf_strtoupper(arg);
+	param->type = VAL_INVAL;
 	if (ft_strncmp(arg, STR_MANDELBROT, ft_strlen(arg) + 1) == 0)
 		param->type = TYPE_MANDELBROT;
 	else if (ft_strncmp(arg, STR_JULIA, ft_strlen(arg) + 1) == 0)
@@ -55,6 +56,8 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 				ft_atof(argv[IDX_ARG_CX]), ft_atof(argv[IDX_ARG_CY]));
 	}
 	free(arg);
+	if (param->type == VAL_INVAL)
+		return (ERR_INVAL);
 	return (ERR_NOERR);
 } 
 
