@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_calc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 15:31:16 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 08:25:01 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle)
 		ft_cartes_set(&z, z.x * z.x - z.y * z.y + c.x, 2 * z.x * z.y + c.y);
 		i++;
 	}
-	if (i == cycle)
-		return (COLOR_BG);
 	return (i);
 }
 
@@ -41,8 +39,6 @@ int	fra_calc_julia(t_cartes z, t_cartes c, int cycle)
 		ft_cartes_set(&z, z.x * z.x - z.y * z.y + c.x, 2 * z.x * z.y + c.y);
 		i++;
 	}
-	if (i == cycle)
-		return (COLOR_BG);
 	return (i);
 }
 

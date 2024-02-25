@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_render_fractal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 15:25:01 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 08:27:10 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	fra_render_fractal(t_var *var)
 			else
 				iter = fra_calc_newton(coord, var->param->constant, var->param->cycle);
 			// color_code = var->fp[param->param->type](&coord, var->param->color);
-			fra_render_pixel(&var->img[IDX_VISION], var->param->color[iter % N_COLOR], &pixel);
+			if (iter != var->param->cycle)
+				fra_render_pixel(&var->img[IDX_VISION], var->param->color[iter % N_COLOR], &pixel);
 			// fra_render_pixel(&var->img[IDX_VISION], ft_color_hsv2code((iter % N_HUE) * (360 / N_HUE), 0xff, 0xff), &pixel);
 			pixel.y++;
 		}
