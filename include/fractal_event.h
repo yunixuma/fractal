@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 13:07:01 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:05:47 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@
 # define KEY_MOVEDOWN		VK_DOWN
 # define KEY_MOVELEFT		VK_LEFT
 # define KEY_MOVERIGHT		VK_RIGHT
+# define KEY_TURNLEFT		VK_Z
+# define KEY_TURNRIGHT		VK_X
 # define KEY_REALPLUS		VK_D
 # define KEY_REALMINUS		VK_A
 # define KEY_IMAGPLUS		VK_W
 # define KEY_IMAGMINUS		VK_S
 # define KEY_CYCLE_INCR		VK_R
 # define KEY_CYCLE_DECR		VK_E
-# define KEY_TURNLEFT		VK_Z
-# define KEY_TURNRIGHT		VK_X
 # define KEY_CURSOR			VK_C
 # define KEY_SPEED			VK_F
 # define KEY_TELE			VK_PGUP

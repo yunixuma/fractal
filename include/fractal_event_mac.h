@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 13:07:49 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:04:36 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define KEYCODE_A			0x00
 # define KEYCODE_S			0x01
 # define KEYCODE_D			0x02
+# define KEYCODE_F			0x03
 # define KEYCODE_Z			0x18
 # define KEYCODE_X			0x19
 # define KEYCODE_C			0x1a
@@ -51,6 +52,8 @@
 # define KEY_IMAGMINUS		KEYCODE_S
 # define KEY_CYCLE_INCR		KEYCODE_R
 # define KEY_CYCLE_DECR		KEYCODE_E
+# define KEY_CURSOR			KEYCODE_C
+# define KEY_SPEED			KEYCODE_F
 # define KEY_NONE			0x7fffffffL
 
 #endif

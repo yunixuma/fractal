@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 12:55:33 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 13:56:03 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,17 @@
 # include <errno.h>
 
 # define OFFSET_ARG			1
-# define LEN_MAXPATH		255
 # define BITS_CHANNEL		8
-# define MASK_CHANNEL		0xff
 # define ERR_NOERR			0
 # define ERR_NOARG			EISDIR
 # define ERR_MANYARGS		E2BIG
-# define ERR_FEXT			ENOEXEC
-# define ERR_FPATH			ENAMETOOLONG
-# define ERR_OPEN			ENOENT
 # define ERR_ALLOC			ENOMEM
-# define ERR_ID				EFAULT
-# define ERR_DUP			EEXIST
 # define ERR_NOTNUM			EDOM
 # define ERR_RANGE			ERANGE
 # define ERR_MANYVALS		EOVERFLOW
 # define ERR_NODEF			ENXIO
 # define ERR_EMPTY			ENODATA
-# define ERR_CHR			EINVAL
-# define ERR_COUNT			EMLINK
-# define ERR_OUTER			EILSEQ
-//# define ERR_SHAPE			EMSGSIZE
-//# define ERR_PATH			EHOSTUNREACH
 # define ERR_MLX			EBUSY
-//# define ERR_HUGE			EFBIG
 # define TYPE_MANDELBROT	1
 # define TYPE_JULIA			2
 
@@ -53,14 +40,12 @@
 # define ZOOM_MAX			2.56
 # define ZOOM_MIN			0.0000000000000090949470177292823755
 # define CYCLE_DEFAULT		256
-# define CYCLE_MAX			65536
+# define CYCLE_MAX			4096
 # define CYCLE_MIN			1
 # define WIDTH_VISION		800
 # define HEIGHT_VISION		600
 # define ZERO_VISION		0
 # define LIMIT_SIZE			4
-# define LEN_POS			2
-# define WEIGHT_FRAME		2
 # define UNIT_SPEED			1
 # define MAX_SPEED			16
 # define FLAG_NOEVENT		0x00
@@ -101,9 +86,6 @@ typedef enum e_pallete
 	COLOR_6		= 0x00ffff,
 	COLOR_7		= 0x7f7f7f
 }	t_palette;
-
-# define N_DIRECTION		IDX_FREE
-# define N_TEXTURE			N_DIRECTION
 
 typedef enum e_imgidx
 {

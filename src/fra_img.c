@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 23:15:01 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 13:54:11 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	fra_img_init(t_var *var)
 	while (i < N_IMAGE)
 	{
 		if (var->img[i++].ptr == NULL)
-			return (ft_seterr(ERR_OPEN));
+			return (ft_seterr(ERR_MLX));
 	}
 	return (ERR_NOERR);
 }

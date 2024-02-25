@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/22 09:54:45 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:26:58 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ int	fra_win_init(t_var *var)
 int	fra_win_draw_vision(t_var *var)
 {
 	fra_render_background(var);
+	ft_putendl_fd(MSG_WAIT_CALC, STDOUT_FILENO);
 	fra_render_fractal(var);
 	mlx_put_image_to_window(var->conn, var->win, var->img[IDX_VISION].ptr, \
 		ZERO_VISION, ZERO_VISION);
-//debug_fra_ctrl(&var->param);
-//debug_printf(".");
+	ft_prompt_arg(PROMPT_MOVE_UP, 1);
+	ft_prompt_clr_line();
 	return (ERR_NOERR);
 }
 

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 13:17:23 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 14:14:37 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,26 +23,16 @@
 # define MSG_ERR			"\033[1;31mError\033[0m"
 # define MSG_NOARG			"Missing the argument to specify a param file"
 # define MSG_MANYARGS		"Please specify only one argument"
-# define MSG_FEXT			"Filename of param file must be \"*.cub\""
-# define MSG_FPATH			"The file path is too long"
 # define MSG_OPEN			"Cannot open the file"
 # define MSG_ALLOC			"An error occured during allocating memory"
-# define MSG_ID			    "Invalid identifier determined"
-# define MSG_DUP			"Identifier redefined"
 # define MSG_NOTNUM			"Value of color must be a number"
 # define MSG_RANGE			"Value of color is out of range"
 # define MSG_MANYVALS		"Number of color channels must be 3"
 # define MSG_NODEF			"Missing Defination"
 # define MSG_EMPTY			"Empty line appeared"
-# define MSG_CHR			"Invalid character contained"
-//# define MSG_SHAPE			"The map must be rectangular"
-# define MSG_COUNT			"Too many or too few characters contained"
-# define MSG_OUTER			"The map must be surrounded by walls"
-//# define MSG_PATH			"No route to the exit and/or some collectibles"
-//# define MSG_HUGE			"The map is too large to display"
 # define MSG_MLX			"An error occured during initiate a X-Window I/F"
-# define MSG_WAIT			"Wait a moment for creating the window..."
-//# define MSG_HOWTO_GOAL	"Control the monkey to take all stars to dragon"
+# define MSG_WAIT_WIN		"Wait a moment for creating the window..."
+# define MSG_WAIT_CALC		"\033[33mCalculating...\033[39m"
 # define MSG_HOWTO_MOVE		"Move: \033[1m[Up][Left][Down][Right]\033[0m\t"
 # define MSG_HOWTO_TURN		"Turn: \033[1m[Z][X]\033[0m\n"
 # define MSG_HOWTO_PARAM	"Move: \033[1m[D][A][W][S]\033[0m\t"
@@ -56,14 +46,12 @@
 # define MSG_HLINE			"\033[2m--------------------------------------\033[0m"
 # define MSG_STATUS_POS_1	"Coord: (\033[4;32m%lf\033[0m, "
 # define MSG_STATUS_POS_2	"\033[4;32m%lf\033[0m)\t"
-# define MSG_STATUS_PARAM_1	"Constant: (\033[4;32m%lf\033[0m "
-# define MSG_STATUS_PARAM_2	"\033[4;32m + %lf\033[0m i)\n"
-# define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\n"
+# define MSG_STATUS_PARAM_1	"Constant: (\033[4;32m%lf\033[0m"
+# define MSG_STATUS_PARAM_2	" + \033[4;32m%lf\033[0m i)\n"
+# define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\t"
 # define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
 # define MSG_STATUS_CYCLE	"Cycle: \033[4;32m%5d\033[0m\t"
-# define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
-//# define MSG_SCORE			"Player %3d scores moved\n"
+# define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\n"
 # define MSG_BREAK			"\033[33mTerminated by player's operation\033[39m"
-//# define MSG_GOAL			"Congratulations (%3d pts in the end)"
 
 #endif
