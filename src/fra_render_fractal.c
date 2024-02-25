@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_render_fractal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 13:03:14 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 15:25:01 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	fra_render_fractal(t_var *var)
 {
 	t_cartes	coord;
 	t_addr		pixel;
-	int			color_code;
+	int			iter;
 
 	pixel.x = 0;
 	while (pixel.x < WIDTH_VISION)
@@ -27,11 +27,14 @@ void	fra_render_fractal(t_var *var)
 			coord.x = (double)(pixel.x - WIDTH_VISION / 2) * var->param->zoom - var->param->coord.x;
 			coord.y = (double)(pixel.y - HEIGHT_VISION / 2) * var->param->zoom - var->param->coord.y;
 			if (var->param->type == TYPE_MANDELBROT)
-				color_code = fra_calc_mandelbrot(coord, var->param->color, var->param->cycle, var->param->constant);
+				iter = fra_calc_mandelbrot(coord, var->param->constant, var->param->cycle);
+			else if (var->param->type == TYPE_JULIA)
+				iter = fra_calc_julia(coord, var->param->constant, var->param->cycle);
 			else
-				color_code = fra_calc_julia(coord, var->param->color, var->param->cycle, var->param->constant);
+				iter = fra_calc_newton(coord, var->param->constant, var->param->cycle);
 			// color_code = var->fp[param->param->type](&coord, var->param->color);
-			fra_render_pixel(&var->img[IDX_VISION], color_code, &pixel);
+			fra_render_pixel(&var->img[IDX_VISION], var->param->color[iter % N_COLOR], &pixel);
+			// fra_render_pixel(&var->img[IDX_VISION], ft_color_hsv2code((iter % N_HUE) * (360 / N_HUE), 0xff, 0xff), &pixel);
 			pixel.y++;
 		}
 		pixel.x++;

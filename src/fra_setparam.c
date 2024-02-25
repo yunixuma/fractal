@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 15:03:38 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/25 15:32:42 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 	if (ft_strncmp(arg, STR_MANDELBROT, ft_strlen(arg) + 1) == 0)
 		param->type = TYPE_MANDELBROT;
 	else if (ft_strncmp(arg, STR_JULIA, ft_strlen(arg) + 1) == 0)
-	{
 		param->type = TYPE_JULIA;
-		if (argc < OFFSET_ARG + IDX_ARG_CY)
-			ft_cartes_set(&param->constant, 0, 0);
-		else
-			ft_cartes_set(&param->constant, \
-				ft_atof(argv[IDX_ARG_CX]), ft_atof(argv[IDX_ARG_CY]));
-	}
+	else if (ft_strncmp(arg, STR_NEWTON, ft_strlen(arg) + 1) == 0)
+		param->type = TYPE_NEWTON;
+	if (argc < OFFSET_ARG + IDX_ARG_CY)
+		ft_cartes_set(&param->constant, 0, 0);
+	else
+		ft_cartes_set(&param->constant, \
+			ft_atof(argv[IDX_ARG_CX]), ft_atof(argv[IDX_ARG_CY]));
 	free(arg);
 	if (param->type == VAL_INVAL)
 		return (ERR_INVAL);

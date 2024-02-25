@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:54:21 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/25 15:32:56 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define ERR_MLX			EBUSY
 # define TYPE_MANDELBROT	1
 # define TYPE_JULIA			2
+# define TYPE_NEWTON		4
 
 # define UNIT_MOVE			16.
 # define UNIT_ZOOM			1.0905077326652576592070106557606

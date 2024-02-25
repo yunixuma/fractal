@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:53:19 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/25 15:33:24 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define STR_EMPTY			""
 # define STR_MANDELBROT		"MANDELBROT"
 # define STR_JULIA			"JULIA"
+# define STR_NEWTON			"NEWTON"
 # define STR_TITLE			"fract-ol"
 # define STR_ON				"\033[43m ON  \033[49m"
 # define STR_OFF			"\033[44m OFF \033[49m"
