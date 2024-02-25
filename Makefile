@@ -6,7 +6,7 @@
 #    By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 16:52:37 by ykosaka           #+#    #+#              #
-#    Updated: 2024/02/24 14:25:40 by Yoshihiro K      ###   ########.fr        #
+#    Updated: 2024/02/25 12:58:46 by Yoshihiro K      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC				= fra_main.c fra_setparam.c \
 				  fra_render_rectangle.c fra_render_line.c fra_render_pixel.c \
 				  fra_render_imgline.c fra_render_imgpixel.c \
 				  fra_render_blend.c \
-				  fra_ctrl.c \
+				  fra_ctrl.c fra_ctrl_param.c \
 				  fra_ctrl_keyhook.c fra_ctrl_keyhook_fire.c \
 				  fra_ctrl_cursorhook.c fra_ctrl_clickhook.c \
 				  ft_mapseek.c ft_mapsize.c ft_addr.c ft_cartes.c \

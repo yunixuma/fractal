@@ -59,8 +59,8 @@ void	fra_render_imgpixel(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
-int		fra_calc_mandelbrot(t_cartes c, int *color, t_cartes z);
-int		fra_calc_julia(t_cartes z, int *color, t_cartes c);
+int		fra_calc_mandelbrot(t_cartes c, int *color, int cycle, t_cartes z);
+int		fra_calc_julia(t_cartes z, int *color, int cycle, t_cartes c);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);
 int		fra_ctrl_keyhook_up(int key, t_var *var);
@@ -73,6 +73,8 @@ bool	fra_ctrl_constant(t_param *param, t_cartes *move);
 bool	fra_ctrl_speed(t_param *param);
 bool	fra_ctrl_zoom(t_param *param, double zoom_add);
 bool	fra_ctrl_cursormode(t_param *param);
+bool	fra_ctrl_param_constant(t_param *param, t_cartes *move);
+bool	fra_ctrl_param_cycle(t_param *param, double ratio);
 int		fra_exit(int errnum);
 int		fra_exit_mlx(t_var *var, int errnum);
 int		fra_exit_mlx_break(t_var *var);

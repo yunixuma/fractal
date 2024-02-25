@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 01:47:12 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 12:59:24 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,12 @@ bool	fra_ctrl_move(t_param *param, t_cartes *move)
 	return (true);
 }
 
-bool	fra_ctrl_constant(t_param *param, t_cartes *move)
-{
-	param->constant.y += move->y;
-	param->constant.x += move->x;
-	return (true);
-}
-
-bool	fra_ctrl_zoom(t_param *param, double zoom_ply)
+bool	fra_ctrl_zoom(t_param *param, double ratio)
 {
 	double	zoom_bak;
 
 	zoom_bak = param->zoom;
-	param->zoom *= zoom_ply;
+	param->zoom *= ratio;
 	if (param->zoom > ZOOM_MAX)
 		param->zoom = ZOOM_MAX;
 	else if (param->zoom < ZOOM_MIN)
@@ -64,15 +57,3 @@ bool	fra_ctrl_cursormode(t_param *param)
 		param->event |= FLAG_CURSOR;
 	return (true);
 }
-
-/*
-bool	fra_ctrl_judge(t_var *var)
-{
-	if (var->param->map[(size_t)var->param->cartes.y][(size_t)var->param->cartes.x] \
-		!= CHRS_MAP[IDX_SOUTH])
-		return (false);
-	else if (ft_mapseek_exist(var->param->map, CHRS_MAP[IDX_EAST]))
-		return (false);
-	return (true);
-}
-*/

@@ -31,13 +31,25 @@ static bool	fra_ctrl_keyhook_fire_move(t_cartes *move, int key, \
 	return (true);
 }
 
-static bool	fra_ctrl_keyhook_fire_zoom(double *zoom, int key, int speed)
+static bool	fra_ctrl_keyhook_fire_zoom(double *ratio, int key, int speed)
 {
-	*zoom = 1;
+	*ratio = 1;
 	if (key == KEY_WIDE)
-		*zoom = UNIT_ZOOM * speed;
+		*ratio = UNIT_ZOOM * speed;
 	else if (key == KEY_TELE)
-		*zoom /= (UNIT_ZOOM * speed);
+		*ratio /= (UNIT_ZOOM * speed);
+	else
+		return (false);
+	return (true);
+}
+
+static bool	fra_ctrl_keyhook_fire_cycle(double *ratio, int key)
+{
+	*ratio = 1;
+	if (key == KEY_CYCLE_INCR)
+		*ratio = UNIT_CYCLE;
+	else if (key == KEY_CYCLE_DECR)
+		*ratio /= UNIT_CYCLE;
 	else
 		return (false);
 	return (true);
@@ -77,7 +89,10 @@ int	fra_ctrl_keyhook_fire(int key, t_var *var)
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else if (fra_ctrl_keyhook_fire_constant(&move, key, \
 		var->param->speed, var->param->zoom) \
-		&& fra_ctrl_constant(var->param, &move))
+		&& fra_ctrl_param_constant(var->param, &move))
+		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
+	else if (fra_ctrl_keyhook_fire_cycle(&move.x, key) \
+		&& fra_ctrl_param_cycle(var->param, move.x))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else
 		return (false);

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 01:41:36 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 13:07:01 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 
 # define VK_Q				'q'
 # define VK_W				'w'
+# define VK_E				'e'
+# define VK_R				'r'
 # define VK_A				'a'
 # define VK_S				's'
 # define VK_D				'd'
@@ -59,6 +61,8 @@
 # define KEY_REALMINUS		VK_A
 # define KEY_IMAGPLUS		VK_W
 # define KEY_IMAGMINUS		VK_S
+# define KEY_CYCLE_INCR		VK_R
+# define KEY_CYCLE_DECR		VK_E
 # define KEY_TURNLEFT		VK_Z
 # define KEY_TURNRIGHT		VK_X
 # define KEY_CURSOR			VK_C

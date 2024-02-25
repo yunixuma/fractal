@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 01:57:15 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/25 13:17:23 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,18 @@
 # define MSG_HOWTO_SCROLL	"Cursor: \033[1m[C][MidClick]\033[0m\n"
 # define MSG_HOWTO_ZOOMIN	"Zoom-in: \033[1m[PgUp][ScrUp]\033[0m\t"
 # define MSG_HOWTO_ZOOMOUT	"Zoom-out: \033[1m[PgDn][ScrDn]\033[0m\n"
-# define MSG_HOWTO_SPEED	"Change Speed: \033[1m[F][RightClick]\033[0m\n"
+# define MSG_HOWTO_SPEED	"Change Speed: \033[1m[F][RightClick]\033[0m\t"
+# define MSG_HOWTO_CYCLE	"Calc. Cycle: \033[1m[E][R]\033[0m\n"
 # define MSG_HOWTO_EXIT		"Exit: \033[1m[Q]\033[0m or \033[1m[Esc]\033[0m\n"
 # define MSG_HLINE			"\033[2m--------------------------------------\033[0m"
 # define MSG_STATUS_POS_1	"Coord: (\033[4;32m%lf\033[0m, "
 # define MSG_STATUS_POS_2	"\033[4;32m%lf\033[0m)\t"
-# define MSG_STATUS_PARAM_1	"Constant: (\033[4;32m%lf\033[0m, "
-# define MSG_STATUS_PARAM_2	"\033[4;32m%lf\033[0m)\n"
-# define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
-# define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
+# define MSG_STATUS_PARAM_1	"Constant: (\033[4;32m%lf\033[0m "
+# define MSG_STATUS_PARAM_2	"\033[4;32m + %lf\033[0m i)\n"
 # define MSG_STATUS_MODE	"Cursor: \033[1m%s\033[0m\n"
+# define MSG_STATUS_SPEED	"Speed: \033[1;32;46m %d \033[0m\t"
+# define MSG_STATUS_CYCLE	"Cycle: \033[4;32m%5d\033[0m\t"
+# define MSG_STATUS_ZOOM	"Zoom: \033[4;32m%6.3lf%%\033[0m\t"
 //# define MSG_SCORE			"Player %3d scores moved\n"
 # define MSG_BREAK			"\033[33mTerminated by player's operation\033[39m"
 //# define MSG_GOAL			"Congratulations (%3d pts in the end)"
