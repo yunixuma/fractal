@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_render_fractal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
+/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 08:27:10 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 14:33:29 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	fra_render_fractal(t_var *var)
 			else if (var->param->type == TYPE_JULIA)
 				iter = fra_calc_julia(coord, var->param->constant, var->param->cycle);
 			else
-				iter = fra_calc_newton(coord, var->param->constant, var->param->cycle);
+				iter = fra_calc_sierpinski(coord, var->param->cycle);
 			// color_code = var->fp[param->param->type](&coord, var->param->color);
 			if (iter != var->param->cycle)
 				fra_render_pixel(&var->img[IDX_VISION], var->param->color[iter % N_COLOR], &pixel);

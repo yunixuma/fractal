@@ -6,7 +6,7 @@
 /*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 15:32:42 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 14:29:07 by ykosaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 		param->type = TYPE_MANDELBROT;
 	else if (ft_strncmp(arg, STR_JULIA, ft_strlen(arg) + 1) == 0)
 		param->type = TYPE_JULIA;
-	else if (ft_strncmp(arg, STR_NEWTON, ft_strlen(arg) + 1) == 0)
-		param->type = TYPE_NEWTON;
+	else if (ft_strncmp(arg, STR_SIERPINSKI, ft_strlen(arg) + 1) == 0)
+		param->type = TYPE_SIERPINSKI;
 	if (argc < OFFSET_ARG + IDX_ARG_CY)
 		ft_cartes_set(&param->constant, 0, 0);
 	else

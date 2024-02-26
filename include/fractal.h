@@ -61,7 +61,7 @@ void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 int		fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle);
 int		fra_calc_julia(t_cartes z, t_cartes c, int cycle);
-int		fra_calc_newton(t_cartes z, t_cartes c, int cycle);
+int		fra_calc_sierpinski(t_cartes z, int cycle);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);
 int		fra_ctrl_keyhook_up(int key, t_var *var);
