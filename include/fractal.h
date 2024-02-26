@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractal.h                                            :+:      :+:    :+:   */
+/*   fractal.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/20 18:25:00 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 18:28:31 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 int		fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle);
 int		fra_calc_julia(t_cartes z, t_cartes c, int cycle);
+int		fra_calc_burningship(t_cartes c, t_cartes z, int cycle);
+int		fra_calc_newton(t_cartes z, t_cartes c, int cycle);
 int		fra_calc_sierpinski(t_cartes z, int cycle);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);

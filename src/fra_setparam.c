@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_setparam.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 14:29:07 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 18:22:00 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 		param->type = TYPE_MANDELBROT;
 	else if (ft_strncmp(arg, STR_JULIA, ft_strlen(arg) + 1) == 0)
 		param->type = TYPE_JULIA;
+	else if (ft_strncmp(arg, STR_BURNINGSHIP, ft_strlen(arg) + 1) == 0)
+		param->type = TYPE_BURNINGSHIP;
+	else if (ft_strncmp(arg, STR_NEWTON, ft_strlen(arg) + 1) == 0)
+		param->type = TYPE_NEWTON;
 	else if (ft_strncmp(arg, STR_SIERPINSKI, ft_strlen(arg) + 1) == 0)
 		param->type = TYPE_SIERPINSKI;
 	if (argc < OFFSET_ARG + IDX_ARG_CY)
@@ -59,7 +63,7 @@ static int	fra_setparam_type(t_param *param, int argc, char *argv[])
 	if (param->type == VAL_INVAL)
 		return (ERR_INVAL);
 	return (ERR_NOERR);
-} 
+}
 
 int	fra_setparam(t_param *param, int argc, char *argv[])
 {

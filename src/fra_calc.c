@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_calc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 15:00:41 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 18:27:10 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,43 @@ int	fra_calc_julia(t_cartes z, t_cartes c, int cycle)
 	return (i);
 }
 
-double	ft_area_triangle(t_cartes a, t_cartes b, t_cartes c)
+int	fra_calc_burningship(t_cartes c, t_cartes z, int cycle)
 {
-	double	s;
-	s = (b.x - c.x) * (a.y - c.y) - (b.y - c.y) * (a.x - c.x);
-	if (s < 0)
-		s = -s;
-	return (s);
+	int			i;
+	t_cartes	tmp;
+
+	i = 0;
+	while (i < cycle)
+	{
+		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
+			break ;
+		ft_cartes_set(&tmp, z.x * z.x - z.y * z.y + c.x, 2 * z.x * z.y + c.y);
+		if (tmp.x < 0)
+			tmp.x = -tmp.x;
+		if (tmp.y < 0)
+			tmp.y = -tmp.y;
+		ft_cartes_set(&z, tmp.x, tmp.y);
+		i++;
+	}
+	return (i);
 }
 
-bool	ft_in_triangle(t_cartes z, t_cartes a, t_cartes b, t_cartes c)
+int	fra_calc_newton(t_cartes z, t_cartes c, int cycle)
 {
-	double		abc;
-	double		zab;
-	double		zbc;
-	double		zca;
+	int			i;
 
-	abc = ft_area_triangle(a, b, c);
-	zab = ft_area_triangle(z, a, b);
-	zbc = ft_area_triangle(z, b, c);
-	zca = ft_area_triangle(z, c, a);
-	if (abc == 0 || zab == 0 || zbc == 0 || zca == 0)
-		return (false);
-	else if (abc == zab + zbc + zca)
-		return (true);
-	else
-		return (false);
+	i = 0;
+	while (i < cycle)
+	{
+		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
+			break ;
+		ft_cartes_set(&z, z.x * z.x * z.x - 3 * z.x * z.y * z.y + c.x, \
+			3 * z.x * z.x * z.y + z.y * z.y * z.y + c.y);
+		i++;
+	}
+	if (i == cycle)
+		return (COLOR_BG);
+	return (i);
 }
 
 int	fra_calc_sierpinski(t_cartes z, int cycle)
@@ -78,70 +89,30 @@ int	fra_calc_sierpinski(t_cartes z, int cycle)
 	int			i;
 
 	ft_cartes_set(&a, 0, 1);
-	ft_cartes_set(&b, -sin(ft_math_deg2rad(60)), -cos(ft_math_deg2rad(60)));
-	ft_cartes_set(&c, sin(ft_math_deg2rad(60)), -cos(ft_math_deg2rad(60)));
+	ft_cartes_set(&b, cos(ft_math_deg2rad(-120)), sin(ft_math_deg2rad(-120)));
+	ft_cartes_set(&c, cos(ft_math_deg2rad(-30)), sin(ft_math_deg2rad(-30)));
+	if (!ft_math_in_triangle(z, a, b, c))
+		return (cycle);
 	i = 0;
-	while (i < cycle)
+	while (i++ < cycle)
 	{
-		if (ft_in_triangle(z, a, b, c))
-			break ;
-		if (z.x > (b.x + c.x) / 2)
+		if (z.y >= (a.y + b.y) / 2)
 		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + c.x) / 2, b.y);
-			else
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
+			ft_cartes_set(&b, (a.x + b.x) / 2, (a.y + b.y) / 2);
+			ft_cartes_set(&c, (a.x + c.x) / 2, (a.y + c.y) / 2);
+		}
+		else if (z.x <= (b.x + c.x) / 2)
+		{
+			ft_cartes_set(&c, a.x, c.y);
+			ft_cartes_set(&a, (a.x + b.x) / 2, (a.y + b.y) / 2);
 		}
 		else
 		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-			else
-				ft_cartes_set(&c, (b.x + c.x) / 2, c.y);
+			ft_cartes_set(&b, a.y, b.y);
+			ft_cartes_set(&a, (a.x + c.x) / 2, (a.y + c.y) / 2);
 		}
-		if (z.x > (a.x + c.x) / 2)
-		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + c.x) / 2, b.y);
-			else
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-		}
-		else
-		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-			else
-				ft_cartes_set(&c, (b.x + c.x) / 2, c.y);
-		}
-		if (z.x > (a.x + b.x) / 2)
-		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + c.x) / 2, b.y);
-			else
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-		}
-		else
-		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-			else
-				ft_cartes_set(&c, (b.x + c.x) / 2, c.y);
-		}
-		if (z.x > (a.x + c.x) / 2)
-		{
-			if (z.y < (c.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + c.x) / 2, b.y);
-			else
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-		}
-		else
-		{
-			if (z.y < (b.y + a.y) / 2)
-				ft_cartes_set(&b, (b.x + a.x) / 2, (b.y + a.y) / 2);
-			else
-				ft_cartes_set(&c, (b.x + c.x) / 2, c.y);
-		}
-		i++;
+		if (ft_math_in_triangle(z, a, b, c))
+			return (i);
 	}
 	return (i);
 }

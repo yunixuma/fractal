@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_const.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 14:29:07 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 18:30:05 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@
 # define ERR_NOTNUM			EDOM
 # define ERR_RANGE			ERANGE
 # define ERR_MLX			EBUSY
-# define TYPE_MANDELBROT	1
-# define TYPE_JULIA			2
-# define TYPE_SIERPINSKI		4
+# define TYPE_MANDELBROT	0x01
+# define TYPE_JULIA			0x02
+# define TYPE_BURNINGSHIP	0x11
+# define TYPE_NEWTON		0x14
+# define TYPE_SIERPINSKI	0x18
 
 # define UNIT_MOVE			16.
 # define UNIT_ZOOM			1.0905077326652576592070106557606

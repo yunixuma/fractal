@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractal_string.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 14:29:07 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 18:22:23 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # define STR_EMPTY			""
 # define STR_MANDELBROT		"MANDELBROT"
 # define STR_JULIA			"JULIA"
-# define STR_SIERPINSKI			"SIERPINSKI"
+# define STR_BURNINGSHIP	"BURNINGSHIP"
+# define STR_NEWTON			"NEWTON"
+# define STR_SIERPINSKI		"SIERPINSKI"
 # define STR_TITLE			"fract-ol"
 # define STR_ON				"\033[43m ON  \033[49m"
 # define STR_OFF			"\033[44m OFF \033[49m"
