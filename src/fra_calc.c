@@ -6,18 +6,18 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 18:27:10 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 18:54:38 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractal.h"
 
-int	fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle)
+int	fra_calc_mandelbrot(t_cartes c, t_cartes z, int depth)
 {
 	int			i;
 
 	i = 0;
-	while (i < cycle)
+	while (i < depth)
 	{
 		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
@@ -27,12 +27,12 @@ int	fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle)
 	return (i);
 }
 
-int	fra_calc_julia(t_cartes z, t_cartes c, int cycle)
+int	fra_calc_julia(t_cartes z, t_cartes c, int depth)
 {
 	int			i;
 
 	i = 0;
-	while (i < cycle)
+	while (i < depth)
 	{
 		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
@@ -42,13 +42,13 @@ int	fra_calc_julia(t_cartes z, t_cartes c, int cycle)
 	return (i);
 }
 
-int	fra_calc_burningship(t_cartes c, t_cartes z, int cycle)
+int	fra_calc_burningship(t_cartes c, t_cartes z, int depth)
 {
 	int			i;
 	t_cartes	tmp;
 
 	i = 0;
-	while (i < cycle)
+	while (i < depth)
 	{
 		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
@@ -63,12 +63,12 @@ int	fra_calc_burningship(t_cartes c, t_cartes z, int cycle)
 	return (i);
 }
 
-int	fra_calc_newton(t_cartes z, t_cartes c, int cycle)
+int	fra_calc_newton(t_cartes z, t_cartes c, int depth)
 {
 	int			i;
 
 	i = 0;
-	while (i < cycle)
+	while (i < depth)
 	{
 		if (z.x * z.x + z.y * z.y > LIMIT_SIZE)
 			break ;
@@ -76,12 +76,12 @@ int	fra_calc_newton(t_cartes z, t_cartes c, int cycle)
 			3 * z.x * z.x * z.y + z.y * z.y * z.y + c.y);
 		i++;
 	}
-	if (i == cycle)
+	if (i == depth)
 		return (COLOR_BG);
 	return (i);
 }
 
-int	fra_calc_sierpinski(t_cartes z, int cycle)
+int	fra_calc_sierpinski(t_cartes z, int depth)
 {
 	t_cartes	a;
 	t_cartes	b;
@@ -92,9 +92,9 @@ int	fra_calc_sierpinski(t_cartes z, int cycle)
 	ft_cartes_set(&b, cos(ft_math_deg2rad(-120)), sin(ft_math_deg2rad(-120)));
 	ft_cartes_set(&c, cos(ft_math_deg2rad(-30)), sin(ft_math_deg2rad(-30)));
 	if (!ft_math_in_triangle(z, a, b, c))
-		return (cycle);
+		return (depth);
 	i = 0;
-	while (i++ < cycle)
+	while (i++ < depth)
 	{
 		if (z.y >= (a.y + b.y) / 2)
 		{

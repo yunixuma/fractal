@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fra_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykosaka <ykosaka@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:04:04 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:54:59 by ykosaka          ###   ########.fr       */
+/*   Updated: 2024/02/26 18:54:52 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	fra_print_control(void)
 	ft_putstr_fd(MSG_HOWTO_SCROLL, STDOUT_FILENO);
 	ft_putstr_fd(MSG_HOWTO_ZOOMIN, STDOUT_FILENO);
 	ft_putstr_fd(MSG_HOWTO_ZOOMOUT, STDOUT_FILENO);
-	ft_putstr_fd(MSG_HOWTO_CYCLE, STDOUT_FILENO);
+	ft_putstr_fd(MSG_HOWTO_DEPTH, STDOUT_FILENO);
 	ft_putstr_fd(MSG_HOWTO_SPEED, STDOUT_FILENO);
 	ft_putstr_fd(MSG_HOWTO_EXIT, STDOUT_FILENO);
 	ft_putendl_fd(MSG_HLINE, STDOUT_FILENO);
@@ -68,7 +68,7 @@ void	fra_print_status(t_param *param)
 	printf(MSG_STATUS_PARAM_2, param->constant.y);
 	printf(MSG_STATUS_MODE, cursor_mode[ft_hasflag(param->event, FLAG_CURSOR)]);
 	printf(MSG_STATUS_SPEED, param->speed);
-	printf(MSG_STATUS_CYCLE, param->cycle);
+	printf(MSG_STATUS_DEPTH, param->depth);
 	printf(MSG_STATUS_ZOOM, 1 / param->zoom);
 }
 

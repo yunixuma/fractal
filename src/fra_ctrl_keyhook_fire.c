@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 08:20:45 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 18:54:52 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ static bool	fra_ctrl_keyhook_fire_zoom(double *ratio, int key, int speed)
 	return (true);
 }
 
-static bool	fra_ctrl_keyhook_fire_cycle(double *ratio, int key)
+static bool	fra_ctrl_keyhook_fire_depth(double *ratio, int key)
 {
 	*ratio = 1;
-	if (key == KEY_CYCLE_INCR)
-		*ratio = UNIT_CYCLE;
-	else if (key == KEY_CYCLE_DECR)
-		*ratio /= UNIT_CYCLE;
+	if (key == KEY_DEPTH_INCR)
+		*ratio = UNIT_DEPTH;
+	else if (key == KEY_DEPTH_DECR)
+		*ratio /= UNIT_DEPTH;
 	else
 		return (false);
 	return (true);
@@ -91,8 +91,8 @@ int	fra_ctrl_keyhook_fire(int key, t_var *var)
 		var->param->speed, var->param->zoom) \
 		&& fra_ctrl_param_constant(var->param, &move))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
-	else if (fra_ctrl_keyhook_fire_cycle(&move.x, key) \
-		&& fra_ctrl_param_cycle(var->param, move.x))
+	else if (fra_ctrl_keyhook_fire_depth(&move.x, key) \
+		&& fra_ctrl_param_depth(var->param, move.x))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else
 		return (false);

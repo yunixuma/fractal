@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 18:22:00 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 18:54:52 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	fra_setparam(t_param *param, int argc, char *argv[])
 	param->key = KEY_NONE;
 	ft_addr_set(&param->cursor, VAL_INVAL, VAL_INVAL);
 	param->speed = UNIT_SPEED;
-	param->cycle = CYCLE_DEFAULT;
+	param->depth = DEPTH_DEFAULT;
 	param->title = argv[IDX_ARG_TYPE];
 	return (fra_setparam_type(param, argc, argv));
 }

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 08:18:21 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/02/26 18:58:16 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ int	fra_ctrl_clickhook(int button, int x, int y, t_var *var)
 		&& fra_ctrl_zoom(var->param, ratio))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;*/
 	else if (fra_ctrl_clickhook_zoom(&coord, &ratio, button, var->param) \
-		&& fra_ctrl_zoom(var->param, ratio) && fra_ctrl_move(var->param, &coord))
+		&& fra_ctrl_zoom(var->param, ratio) \
+		&& fra_ctrl_move(var->param, &coord))
 		var->param->event |= FLAG_DRAW | FLAG_PROMPT;
 	else if (button == BUTTON_SPEED \
 		&& fra_ctrl_speed(var->param))
