@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 18:30:05 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/03/03 13:36:43 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@
 
 # define UNIT_MOVE			16.
 # define UNIT_ZOOM			1.0905077326652576592070106557606
-# define UNIT_CYCLE			2
+# define UNIT_DEPTH			2
 # define UNIT_PARAM			0.1
 # define ANGLE_RIGHT		90.
 # define ZOOM_DEFAULT		0.01
 # define ZOOM_MAX			2.56
 # define ZOOM_MIN			0.0000000000000090949470177292823755
-# define CYCLE_DEFAULT		256
-# define CYCLE_MAX			4096
-# define CYCLE_MIN			1
+# define DEPTH_DEFAULT		256
+# define DEPTH_MAX			4096
+# define DEPTH_MIN			1
 # define WIDTH_VISION		800
 # define HEIGHT_VISION		600
 # define ZERO_VISION		0

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 18:57:42 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/03/03 15:50:40 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,11 @@ void	fra_render_fractal(t_var *var)
 // DI(depth);
 // DD(coord.x);
 // DD(coord.y);
-			fra_render_pixel(&var->img[IDX_VISION], \
-				var->param->color[depth % N_COLOR], &pixel);
+			if (depth == var->param->depth)
+				fra_render_pixel(&var->img[IDX_VISION], COLOR_BG, &pixel);
+			else
+				fra_render_pixel(&var->img[IDX_VISION], \
+					var->param->color[depth % N_COLOR], &pixel);
 			// fra_render_pixel(&var->img[IDX_VISION], ft_color_hsv2code((depth % N_HUE) * (360 / N_HUE), 0xff, 0xff), &pixel);
 			pixel.y++;
 		}

@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/26 18:28:31 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/03/03 15:36:13 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void	fra_render_imgpixel(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
 void	fra_render_imgline(t_img *img_dst, t_img *img_src, \
 	t_addr *dst, t_addr *src);
-int		fra_calc_mandelbrot(t_cartes c, t_cartes z, int cycle);
-int		fra_calc_julia(t_cartes z, t_cartes c, int cycle);
-int		fra_calc_burningship(t_cartes c, t_cartes z, int cycle);
-int		fra_calc_newton(t_cartes z, t_cartes c, int cycle);
-int		fra_calc_sierpinski(t_cartes z, int cycle);
+int		fra_calc_mandelbrot(t_cartes c, t_cartes z, int depth);
+int		fra_calc_julia(t_cartes z, t_cartes c, int depth);
+int		fra_calc_burningship(t_cartes c, t_cartes z, int depth);
+int		fra_calc_newton(t_cartes z, t_cartes c, int depth);
+int		fra_calc_sierpinski(t_cartes z, int depth);
 void	fra_ctrl_init(t_param *param);
 int		fra_ctrl_keyhook_down(int key, t_var *var);
 int		fra_ctrl_keyhook_up(int key, t_var *var);
@@ -77,7 +77,7 @@ bool	fra_ctrl_speed(t_param *param);
 bool	fra_ctrl_zoom(t_param *param, double zoom_add);
 bool	fra_ctrl_cursormode(t_param *param);
 bool	fra_ctrl_param_constant(t_param *param, t_cartes *move);
-bool	fra_ctrl_param_cycle(t_param *param, double ratio);
+bool	fra_ctrl_param_depth(t_param *param, double ratio);
 int		fra_exit(int errnum);
 int		fra_exit_mlx(t_var *var, int errnum);
 int		fra_exit_mlx_break(t_var *var);

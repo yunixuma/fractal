@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 12:43:52 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/03/03 15:36:13 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ typedef struct s_param
 	int			key;
 	t_addr		cursor;
 	int			speed;
-	int			cycle;
+	int			depth;
 	char		*title;
 }	t_param;
 

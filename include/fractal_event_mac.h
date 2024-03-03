@@ -6,7 +6,7 @@
 /*   By: Yoshihiro Kosaka <ykosaka@student.42tok    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:03:00 by ykosaka           #+#    #+#             */
-/*   Updated: 2024/02/25 14:04:36 by Yoshihiro K      ###   ########.fr       */
+/*   Updated: 2024/03/03 13:38:04 by Yoshihiro K      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@
 # define KEY_REALMINUS		KEYCODE_A
 # define KEY_IMAGPLUS		KEYCODE_W
 # define KEY_IMAGMINUS		KEYCODE_S
-# define KEY_CYCLE_INCR		KEYCODE_R
-# define KEY_CYCLE_DECR		KEYCODE_E
+# define KEY_DEPTH_INCR		KEYCODE_R
+# define KEY_DEPTH_DECR		KEYCODE_E
 # define KEY_CURSOR			KEYCODE_C
 # define KEY_SPEED			KEYCODE_F
 # define KEY_NONE			0x7fffffffL
